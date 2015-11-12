@@ -1,15 +1,15 @@
-if [[ ! -e ~/.anyenv ]]; then
+if test ! -e ~/.anyenv; then
     git clone https://github.com/riywo/anyenv.git ~/.anyenv;
     echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc;
     echo 'eval "$(anyenv init -)"' >> ~/.bashrc;
     . ~/.bashrc;
 fi
 
-if [[ ! -e ~/.anyenv/envs/plenv ]]; then
+if test ! -e ~/.anyenv/envs/plenv; then
     anyenv install plenv;
 fi
 
-if [[ ! -e ~/.anyenv/envs/plenv/versions/5.20.2 ]]; then
+if test ! -e ~/.anyenv/envs/plenv/versions/5.20.2; then
     plenv install 5.20.2;
     plenv global 5.20.2;
     plenv rehash;
