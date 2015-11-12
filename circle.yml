@@ -3,7 +3,11 @@ machine:
 
 dependencies:
   pre:
-    - perl -v
+    - git clone https://github.com/riywo/anyenv.git .anyenv
+    - echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
+    - echo 'eval "$(anyenv init -)"' >> ~/.bashrc
+  post:
+    - env | grep PATH
 
 test:
   override:
