@@ -6,9 +6,9 @@ dependencies:
     - ~/.anyenv
   pre:
     - bash circle-setup.sh
-  post:
-    - which carton
 
 test:
+  pre:
+    - carton install --deployment
   override:
-    - prove
+    - carton exec -- prove

@@ -18,7 +18,7 @@ then
     anyenv install plenv;
 fi
 
-eval $(anyenv init -);
+eval "$(anyenv init -)";
 
 if [ ! -d ~/.anyenv/envs/plenv/versions/5.20.2 ]
 then
