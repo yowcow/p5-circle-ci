@@ -3,12 +3,12 @@ machine:
 
 dependencies:
   pre:
-    - git clone https://github.com/riywo/anyenv.git .anyenv
+    - git clone https://github.com/riywo/anyenv.git ~/.anyenv
     - echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
     - echo 'eval "$(anyenv init -)"' >> ~/.bashrc
-    - env | grep PATH
+    - env | grep HOME
   post:
-    - carton -v
+    - which anyenv
 
 test:
   override:
