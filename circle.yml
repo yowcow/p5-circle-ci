@@ -4,8 +4,10 @@ machine:
 dependencies:
   cache_directories:
     - ~/.anyenv
+    - local
   pre:
     - bash circle-setup.sh
+    - carton install --deployment
 
 test:
   pre:
