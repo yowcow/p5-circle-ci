@@ -7,7 +7,7 @@ dependencies:
   #pre:
   #  - bash circle-setup.sh
   post:
-    - rm -r ~/.anyenv
+    - rm -rf ~/.anyenv
 
 test:
   #pre:
