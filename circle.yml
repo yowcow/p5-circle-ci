@@ -6,8 +6,15 @@ dependencies:
     - git clone https://github.com/riywo/anyenv.git .anyenv
     - echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
     - echo 'eval "$(anyenv init -)"' >> ~/.bashrc
+    - exec $SHELL -l
+    - anyenv install plenv
+    - plenv install 5.20.2
+    - plenv global 5.20.2
+    - plenv install-cpanm
+    - plenv rehash
+    - cpanm Carton
   post:
-    - env | grep PATH
+    - carton -v
 
 test:
   override:
