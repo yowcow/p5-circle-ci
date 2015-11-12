@@ -7,8 +7,13 @@ dependencies:
     - echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
     - echo 'eval "$(anyenv init -)"' >> ~/.bashrc
     - anyenv install plenv
+    - plenv install 5.20.2
+    - plenv global 5.20.2
+    - plenv rehash
+    - plenv install-cpanm
+    - cpanm Carton
   post:
-    - which plenv
+    - which carton
 
 test:
   override:
