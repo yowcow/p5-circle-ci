@@ -1,6 +1,5 @@
 package MyTest;
-use strict;
-use warnings;
+use common::sense;
 
 sub test { 'This is a test' }
 

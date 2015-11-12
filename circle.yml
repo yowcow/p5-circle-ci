@@ -3,16 +3,12 @@ machine:
 
 dependencies:
   cache_directories:
-    - "~/.anyenv"
-  #pre:
-  #  - bash circle-setup.sh
-  post:
-    - rm -rf ~/.anyenv
+    - ~/.anyenv
+  pre:
+    - bash circle-setup.sh
 
 test:
-  #pre:
-  #  - carton install --deployment
-  #override:
-  #  - carton exec -- prove
+  pre:
+    - carton install --deployment
   override:
-    - prove
+    - carton exec -- prove
