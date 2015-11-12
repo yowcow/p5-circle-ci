@@ -6,7 +6,6 @@ dependencies:
     - git clone https://github.com/riywo/anyenv.git .anyenv
     - echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
     - echo 'eval "$(anyenv init -)"' >> ~/.bashrc
-    - exec $SHELL -l
     - env | grep PATH
   post:
     - carton -v
