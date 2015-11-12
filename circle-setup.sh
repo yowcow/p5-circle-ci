@@ -4,7 +4,7 @@ if test ! -e ~/.anyenv; then
     echo 'eval "$(anyenv init -)"' >> ~/.bashrc;
 fi
 
-if test -e ~/.anyenv/envs/plenv; then
+if test ! -e ~/.anyenv/envs/plenv; then
     ~/.anyenv/bin/anyenv install plenv;
 fi
 
