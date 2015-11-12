@@ -3,12 +3,16 @@ machine:
 
 dependencies:
   cache_directories:
-    - ~/.anyenv
-  pre:
-    - bash circle-setup.sh
+    - "~/.anyenv"
+  #pre:
+  #  - bash circle-setup.sh
+  post:
+    - rm -r ~/.gradle
 
 test:
-  pre:
-    - carton install --deployment
+  #pre:
+  #  - carton install --deployment
+  #override:
+  #  - carton exec -- prove
   override:
-    - carton exec -- prove
+    - prove
