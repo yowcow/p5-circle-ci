@@ -1,0 +1,10 @@
+machine:
+  environment:
+
+dependencies:
+  pre:
+    - perl -v
+
+test:
+  override:
+    - prove
