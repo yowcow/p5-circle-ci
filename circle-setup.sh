@@ -16,6 +16,6 @@ if [[ ! -e ~/.anyenv/envs/plenv/versions/5.20.2 ]]; then
     plenv install-cpanm;
 fi
 
-if [[ ! $(which carton) ]]; then
+if test ! $(which carton); then
     cpanm Carton;
 fi
