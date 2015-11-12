@@ -2,8 +2,10 @@ machine:
   environment:
 
 dependencies:
+  cache_directories:
+    - ~/.anyenv
   pre:
-    - sh circle-setup.sh
+    - bash circle-setup.sh
   post:
     - which carton
 
