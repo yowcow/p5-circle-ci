@@ -7,12 +7,7 @@ dependencies:
     - echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
     - echo 'eval "$(anyenv init -)"' >> ~/.bashrc
     - exec $SHELL -l
-    - anyenv install plenv
-    - plenv install 5.20.2
-    - plenv global 5.20.2
-    - plenv install-cpanm
-    - plenv rehash
-    - cpanm Carton
+    - which anyenv
   post:
     - carton -v
 
