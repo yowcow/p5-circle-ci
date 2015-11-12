@@ -8,15 +8,17 @@ if test ! -e ~/.anyenv/envs/plenv; then
     ~/.anyenv/bin/anyenv install plenv;
 fi
 
-. ~/.bashrc;
+ls -alh;
 
-if test ! -e ~/.anyenv/envs/plenv/versions/5.20.2; then
-    plenv install 5.20.2;
-    plenv global 5.20.2;
-    plenv rehash;
-    plenv install-cpanm;
-fi
+#. ~/.bashrc;
 
-if test ! $(which carton); then
-    cpanm Carton;
-fi
+#if test ! -e ~/.anyenv/envs/plenv/versions/5.20.2; then
+#    plenv install 5.20.2;
+#    plenv global 5.20.2;
+#    plenv rehash;
+#    plenv install-cpanm;
+#fi
+#
+#if test ! $(which carton); then
+#    cpanm Carton;
+#fi
