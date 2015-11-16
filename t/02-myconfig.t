@@ -13,13 +13,16 @@ subtest 'Test dbconfig' => sub {
 
         is @$res, 3;
         is_deeply $res, [
-            'dbi:mysql:database=circle_ci;host=localhost',
+            'dbi:mysql:database=circle_test;unix_socket=/var/run/mysqld/mysqld.sock',
             'ubuntu',
             '',
         ];
     };
 
     subtest 'In local' => sub {
+        local %ENV;
+        delete $ENV{CIRCLECI};
+
         my $res = MyConfig->dbconfig;
 
         is @$res, 3;

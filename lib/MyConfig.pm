@@ -19,7 +19,6 @@ my %CONFIG = (
 );
 
 sub env {
-    warn $ENV{CIRCLECI};
     exists $ENV{CIRCLECI} ? 'circleci' : 'test';
 }
 
