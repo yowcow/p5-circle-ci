@@ -1,4 +1,6 @@
 machine:
+  services:
+    - mysql
   environment:
 
 dependencies:
@@ -7,10 +9,14 @@ dependencies:
     - local
   pre:
     - bash circle-setup.sh
-    - carton install --deployment
+    - make
+
+database:
+  override:
+    - mysql -u ubuntu circle_test < etc/schema.sql
 
 test:
   pre:
-    - carton install --deployment
+    - make
   override:
-    - carton exec -- prove
+    - make test

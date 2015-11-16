@@ -1,6 +1,11 @@
 package MyTest;
 use common::sense;
+use DBI;
+use MyConfig;
 
-sub test { 'This is a test' }
+sub dbh {
+    my $config = MyConfig->dbconfig;
+    DBI->connect(@$config);
+}
 
 1;
