@@ -11,7 +11,7 @@ my %CONFIG = (
     },
     circleci => {
         dbconfig => [
-            'dbi:mysql:database=circle_ci;host=localhost',
+            'dbi:mysql:database=circle_test;unix_socket=/var/run/mysqld/mysqld.sock',
             'ubuntu',
             '',
         ],
