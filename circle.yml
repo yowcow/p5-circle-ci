@@ -8,6 +8,7 @@ dependencies:
     - ~/.anyenv
     - local
   pre:
+    - sudo apt-get update; sudo apt-get install cronolog;
     - bash circle-setup.sh
     - make
 

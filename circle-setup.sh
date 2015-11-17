@@ -32,3 +32,6 @@ if [ ! $(which carton) ]
 then
     cpanm Carton;
 fi
+
+sudo mkdir -p /var/log/my_tmp;
+sudo chmod 777 /var/log/my_tmp;
