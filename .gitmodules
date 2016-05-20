@@ -1,0 +1,3 @@
+[submodule "submodules/my-itamae"]
+	path = submodules/my-itamae
+	url = git@github.com:yowcow/my-itamae.git

@@ -4,13 +4,9 @@ machine:
   environment:
 
 dependencies:
-  cache_directories:
-    - ~/.anyenv
-    - local
   pre:
-    - sudo apt-get update; sudo apt-get install cronolog;
-    - bash circle-setup.sh
-    - make
+    - git submodule update --init
+    - cd submodules/my-itamae && make && make circle
 
 database:
   override:
