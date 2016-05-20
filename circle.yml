@@ -5,6 +5,7 @@ machine:
 
 dependencies:
   pre:
+    - sudo apt-get install -yqq ruby2.0
     - git submodule update --init
     - cd submodules/my-itamae && make && make circle
 
