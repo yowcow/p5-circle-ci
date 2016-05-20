@@ -6,10 +6,12 @@ machine:
   environment:
 
 dependencies:
+  cache_directories:
+    - ~/.anyenv
   pre:
     - git submodule update --init
     - cd submodules/my-itamae && make && make circle
-    - echo "source /usr/local/etc/profile.d/anyenvrc" >> ~/.bashrc
+    - echo "source ~/.anyenvrc" >> ~/.bashrc
 
 database:
   override:
