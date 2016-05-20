@@ -5,7 +5,8 @@ machine:
 
 dependencies:
   pre:
-    - sudo apt-get install -yqq ruby2.0
+    - rbenv install 2.2.2 && rbenv global 2.2.2
+    - gem install bundler
     - git submodule update --init
     - cd submodules/my-itamae && make && make circle
 
