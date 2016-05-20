@@ -9,6 +9,7 @@ dependencies:
   pre:
     - git submodule update --init
     - cd submodules/my-itamae && make && make circle
+    - echo "source /usr/local/etc/profile.d/anyenvrc" >> ~/.bashrc
 
 database:
   override:
@@ -16,6 +17,8 @@ database:
 
 test:
   pre:
+    - perl -v
+    - carton -v
     - make
   override:
     - make test
